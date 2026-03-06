@@ -26,14 +26,18 @@ max-width:600px;
 text-align:center;
 }
 
-h1{
-margin-bottom:40px;
+.question{
+display:none;
+}
+
+.question.active{
+display:block;
 }
 
 input{
 width:100%;
-padding:15px;
-margin:15px 0;
+padding:14px;
+margin-top:15px;
 border:none;
 border-bottom:1px solid #555;
 background:none;
@@ -41,18 +45,26 @@ color:white;
 font-size:16px;
 }
 
-button{
-background:#ff4d4d;
-border:none;
-padding:12px 25px;
-color:white;
-font-size:16px;
+.option{
+background:#1f1f1f;
+padding:12px;
+margin:10px 0;
 border-radius:6px;
 cursor:pointer;
 }
 
-button:hover{
-opacity:0.9;
+.option:hover{
+background:#2c2c2c;
+}
+
+button{
+margin-top:20px;
+background:#ff4d4d;
+border:none;
+padding:10px 20px;
+color:white;
+border-radius:5px;
+cursor:pointer;
 }
 
 </style>
@@ -63,25 +75,123 @@ opacity:0.9;
 
 <div class="container">
 
-<h1>Apply to Work With Us</h1>
+<!-- 1 Instagram -->
 
-<form>
+<div class="question active">
 
-<input type="text" placeholder="Your Name" required>
+<h2>Insert your brand's Instagram URL*</h2>
 
-<input type="email" placeholder="Email Address" required>
+<input placeholder="Type your answer here...">
 
-<input type="text" placeholder="Business Name">
-
-<input type="text" placeholder="Instagram URL">
-
-<input type="text" placeholder="Monthly Ad Budget">
-
-<button type="submit">Submit Application</button>
-
-</form>
+<button onclick="next()">OK</button>
 
 </div>
+
+
+<!-- 2 Website -->
+
+<div class="question">
+
+<h2>Insert your website link*</h2>
+
+<input placeholder="Type your answer here...">
+
+<button onclick="next()">OK</button>
+
+</div>
+
+
+<!-- 3 Revenue -->
+
+<div class="question">
+
+<h2>What is your brand's monthly revenue?*</h2>
+
+<div class="option" onclick="next()">Brand hasn't launched yet</div>
+<div class="option" onclick="next()">$0 - $5K</div>
+<div class="option" onclick="next()">$5K - $10K</div>
+<div class="option" onclick="next()">$10K - $30K</div>
+<div class="option" onclick="next()">+$30K</div>
+
+</div>
+
+
+<!-- 4 Marketing Budget -->
+
+<div class="question">
+
+<h2>What is your marketing budget?*</h2>
+
+<div class="option" onclick="next()">$0</div>
+<div class="option" onclick="next()">$1,000 - $2,000</div>
+<div class="option" onclick="next()">$2,000 - $3,000</div>
+<div class="option" onclick="next()">$3,000 - $4,000</div>
+<div class="option" onclick="next()">$4,000+</div>
+
+</div>
+
+
+<!-- 5 How did you hear -->
+
+<div class="question">
+
+<h2>How did you hear about us?*</h2>
+
+<div class="option" onclick="next()">YouTube</div>
+<div class="option" onclick="next()">Instagram</div>
+<div class="option" onclick="next()">TikTok</div>
+<div class="option" onclick="next()">Email & SMS</div>
+<div class="option" onclick="next()">Word of Mouth</div>
+<div class="option" onclick="next()">Other</div>
+
+</div>
+
+
+<!-- 6 Contact -->
+
+<div class="question">
+
+<h2>Fill out your contact information*</h2>
+
+<input placeholder="First name">
+<input placeholder="Last name">
+<input placeholder="Phone number">
+<input placeholder="Email">
+
+<button onclick="next()">Submit</button>
+
+</div>
+
+
+<!-- 7 Confirmation -->
+
+<div class="question">
+
+<h2>Application Submitted</h2>
+
+<p>Thank you for applying to work with Crich Performance. Our team will review your application and contact you shortly.</p>
+
+</div>
+
+</div>
+
+
+<script>
+
+let step = 0
+let questions = document.querySelectorAll(".question")
+
+function next(){
+
+questions[step].classList.remove("active")
+
+step++
+
+questions[step].classList.add("active")
+
+}
+
+</script>
 
 </body>
 
