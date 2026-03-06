@@ -211,8 +211,8 @@ cursor:pointer;
 <input name="phone" placeholder="Phone number" required>
 <input name="email" placeholder="Email" required>
 
-<button type="submit">Submit</button>
-
+<button type="button" onclick="submitForm()">Submit</button>
+  
 </div>
 
 
@@ -235,6 +235,7 @@ cursor:pointer;
 
 let step = 0
 let questions = document.querySelectorAll(".question")
+let form = document.querySelector("form")
 
 function next(){
 
@@ -251,6 +252,26 @@ function select(field,value){
 document.querySelector(`input[name="${field}"]`).value = value
 
 next()
+
+}
+
+function submitForm(){
+
+fetch(form.action,{
+method:"POST",
+body:new FormData(form),
+headers:{
+'Accept':'application/json'
+}
+}).then(() => {
+
+questions[step].classList.remove("active")
+
+step++
+
+questions[step].classList.add("active")
+
+})
 
 }
 
