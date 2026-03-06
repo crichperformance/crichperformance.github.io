@@ -120,8 +120,8 @@ cursor:pointer;
   
 <div class="container">
 
-<form action="https://formspree.io/f/xkoqwapv" method="POST">
-
+<form id="applyForm" action="https://formspree.io/f/xkoqwapv" method="POST" onsubmit="return false;">
+  
 <!-- 1 Instagram -->
 
 <div class="question active">
@@ -235,14 +235,12 @@ cursor:pointer;
 
 let step = 0
 let questions = document.querySelectorAll(".question")
-let form = document.querySelector("form")
+let form = document.getElementById("applyForm")
 
 function next(){
 
 questions[step].classList.remove("active")
-
 step++
-
 questions[step].classList.add("active")
 
 }
@@ -250,7 +248,6 @@ questions[step].classList.add("active")
 function select(field,value){
 
 document.querySelector(`input[name="${field}"]`).value = value
-
 next()
 
 }
@@ -266,9 +263,7 @@ headers:{
 }).then(() => {
 
 questions[step].classList.remove("active")
-
 step++
-
 questions[step].classList.add("active")
 
 })
