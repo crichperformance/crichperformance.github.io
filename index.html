@@ -1,50 +1,275 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Crich Performance</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+
 body{
-font-family: Arial;
-background:black;
+margin:0;
+font-family:Arial;
+background:#0e0e0e;
 color:white;
-text-align:center;
-padding:60px;
 }
 
-h1{
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+background:linear-gradient(180deg,#0e0e0e,#1a1a1a);
+}
+
+.hero h1{
 font-size:60px;
-color:gold;
+line-height:1.1;
 }
 
-h2{
-color:#cccccc;
+.hero p{
+color:#bbb;
+font-size:18px;
+max-width:600px;
 }
 
 .button{
-background:gold;
-color:black;
-padding:15px 30px;
+background:#ff4d4d;
+padding:14px 28px;
+color:white;
 text-decoration:none;
+border-radius:6px;
 font-weight:bold;
-border-radius:8px;
+display:inline-block;
+margin-top:20px;
 }
+
+.section{
+padding:80px 0;
+text-align:center;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+margin-top:40px;
+}
+
+.card{
+background:#1b1b1b;
+padding:30px;
+border-radius:10px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
+margin-top:40px;
+}
+
+.stat h2{
+font-size:36px;
+color:#ff4d4d;
+}
+
+.footer{
+padding:40px;
+text-align:center;
+border-top:1px solid #333;
+color:#888;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<h1>Crich Performance</h1>
-<h2>Performance Marketing Agency</h2>
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<h1>Empowering brands with data-driven marketing</h1>
 
 <p>
-We help businesses scale revenue using paid advertising and performance marketing strategies.
+Crich Performance helps businesses scale revenue through high-performance paid advertising and growth strategies.
 </p>
 
-<br>
+<a class="button" href="about.html">Learn More</a>
 
-<a class="button" href="mailto:caleb@crichperformance.com">
-Book a Strategy Call
-</a>
+<a class="button" href="mailto:caleb@crichperformance.com">Apply Now</a>
+
+</div>
+
+</section>
+
+
+<!-- SOCIAL PROOF -->
+
+<section class="section">
+
+<div class="container">
+
+<h2>Helping brands achieve consistent growth</h2>
+
+<p>Trusted by businesses scaling through performance marketing.</p>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="section">
+
+<div class="container">
+
+<h2>Everything you need to grow your brand</h2>
+
+<div class="services">
+
+<div class="card">
+
+<h3>Facebook & Instagram Ads</h3>
+
+<p>
+We create high-converting campaigns designed to generate leads and drive revenue.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Performance Marketing</h3>
+
+<p>
+Data-driven advertising strategies focused on scaling revenue and maximizing ROAS.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Conversion Optimization</h3>
+
+<p>
+We optimize funnels, landing pages, and ad creatives to maximize conversions.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESULTS -->
+
+<section class="section">
+
+<div class="container">
+
+<h2>Real and consistent growth</h2>
+
+<p>
+Our strategies are built to scale brands sustainably and profitably.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="section">
+
+<div class="container">
+
+<h2>Our track record</h2>
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>$7.5M+</h2>
+
+<p>Revenue generated</p>
+
+</div>
+
+
+<div class="stat">
+
+<h2>2,000+</h2>
+
+<p>Campaigns managed</p>
+
+</div>
+
+
+<div class="stat">
+
+<h2>100+</h2>
+
+<p>Brands partnered</p>
+
+</div>
+
+
+<div class="stat">
+
+<h2>5x+</h2>
+
+<p>Average ROAS</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="section">
+
+<div class="container">
+
+<h2>Ready to scale your brand?</h2>
+
+<a class="button" href="mailto:caleb@crichperformance.com">Apply Now</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+Crich Performance © 2026
+
+</div>
 
 </body>
+
 </html>
